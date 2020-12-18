@@ -11,5 +11,9 @@
     <%= f.label :cover %>
     <%= f.file_field :avatar %>
   </div>
+ <div class="control">
+    <%= f.label :category %>
+    <%= select_tag :categories, options_for_select(@categories) %>
+  </div>
   <%= f.submit %>
 <% end %>

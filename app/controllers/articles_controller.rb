@@ -5,11 +5,15 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
   def create
     @article = current_user.articles.new(article_params)
+    @categories = Category.all.map { |c| [c.name, c.id] }
+
     if @article.save
+      @article.categories << Category.find_by(id: params[:categories])
       flash[:success] = 'New article created!'
       redirect_to @article
     else
@@ -38,6 +42,7 @@ class ArticlesController < ApplicationController
   end
 
   private
+
   def article_params
     params.require(:article).permit(:title, :content, :avatar)
   end
