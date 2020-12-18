@@ -1,2 +1,17 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<h1 clasS="title">Articles</h1>
+<div class="articles-container">
+  <% @articles.each do |art| %>
+    <h2 class="title">
+      <%= art.title %>
+    </h2>
+    <div class="content">
+      <%= art.content %>
+    </div>
+    <div>
+      <% if art.avatar.attached? %>
+        <%= image_tag(url_for(art.avatar)) %>
+      <% end %>
+      <%= art.avatar.attached? %>
+    </div>
+  <% end %>
+</div>

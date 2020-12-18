@@ -1,0 +1,15 @@
+<%= form_with model: @article do |f| %>
+  <div class="control">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="control">
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+  </div>
+ <div class="control">
+    <%= f.label :cover %>
+    <%= f.file_field :avatar %>
+  </div>
+  <%= f.submit %>
+<% end %>
