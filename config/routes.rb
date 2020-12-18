@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :destroy, :create]
   resources :articles
+  resources :categories
 
   root 'articles#index'
 end
