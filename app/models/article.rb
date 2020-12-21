@@ -3,5 +3,14 @@ class Article < ApplicationRecord
   has_one_attached :avatar
   has_many :artcats
   has_many :categories, through: :artcats
-  
+
+  has_many :votes
+  has_many :voters, through: :votes, class_name: 'User'
+
+  scope :featured, lambda {
+    joins(:votes)
+      .select('articles.*')
+      .order('COUNT(votes.article_id) DESC')
+      .group('articles.title, articles.id').limit(1).take
+  }
 end
