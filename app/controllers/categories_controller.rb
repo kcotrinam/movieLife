@@ -1,5 +1,8 @@
 class CategoriesController < ApplicationController
-  def index; end
+  def index
+    @categories = Category.all.order(priority: :desc)
+    @first_category = Category.all.order(priority: :desc).first
+  end
 
   def new
     @category = Category.new

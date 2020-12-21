@@ -1,2 +1,9 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+ <h1 class="title">Categories</h1>
+ <div class ="has-background-primary">
+  <%= @first_category.name %>
+ </div>
+<% @categories.each do |cat| %>
+  <div>
+    <%= cat.name %>
+  </div>
+<% end %>
