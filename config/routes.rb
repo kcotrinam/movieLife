@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     resources :votes, only: [:create, :destroy]
   end
 
-  root 'articles#index'
+  root 'categories#index'
 end

@@ -1,9 +1,9 @@
- <h1 class="title">Categories</h1>
- <div class ="has-background-primary">
-  <%= @first_category.name %>
- </div>
+<h1 class="title">Categories</h1>
+
+<div class="category-container">
 <% @categories.each do |cat| %>
   <div>
     <%= cat.name %>
   </div>
-<% end %>
+    <% end %>
+</div>
