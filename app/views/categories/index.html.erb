@@ -1,4 +1,10 @@
-<h1 class="title">Categories</h1>
+<div class="most-voted">
+  <%= link_to article_path(@voted_article) do %>
+  <%= image_tag(url_for(@voted_article.avatar)) %>
+  <%= @voted_article.title %>
+
+  <% end %>
+</div>
 
 <div class="category-container">
 <% @categories.each do |cat| %>
@@ -7,3 +13,4 @@
   </div>
     <% end %>
 </div>
+

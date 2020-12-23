@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   def index
     @categories = Category.all.order(priority: :desc)
-    @first_category = Category.all.order(priority: :desc).first
+    @voted_article = Article.get_most_votes
   end
 
   def new
@@ -22,6 +22,8 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @articles = @category.articles
+   
+
   end
 
   def edit
