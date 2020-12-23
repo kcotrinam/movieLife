@@ -1,0 +1,10 @@
+.nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.navbar-start {
+  margin: 0 auto !important;
+  display: flex;
+  justify-content: space-between;
+}

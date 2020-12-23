@@ -1,0 +1,38 @@
+<nav class="nav" role="navigation" aria-label="main navigation">
+  <div>
+    <h1 class="title | mb-0 |">
+      <%= link_to 'MoviesLife', categories_path%>
+    </h1>
+  </div>
+
+
+    <div class="navbar-start">
+      <% categories.each do |cat| %>
+          <%= link_to "#{cat.name}", category_path(cat),  class: 'navbar-item' %>
+      <% end %>
+    </div>
+
+    <div class="navbar-end">
+      <% if user_signed_in?%>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            <%= current_user.name %>
+          </a>
+
+          <div class="navbar-dropdown">
+            <%= link_to 'New category', new_category_path, class: 'navbar-item' %>
+            <%= link_to 'New Article', new_article_path, class: 'navbar-item' %>
+            <hr class="navbar-divider">
+            <%= link_to 'Sign out', sign_out_path, class: 'navbar-item' %>
+          </div>
+        </div>
+      <% else %>
+        <div class="navbar-item">
+          <div class="buttons">
+            <%= link_to 'Sign up', sign_up_path, class: "button is-primary" %>
+            <%= link_to 'Sign in', sign_in_path, class: "button is-light" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</nav>

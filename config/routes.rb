@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :destroy, :create]
   resources :articles
   resources :categories do
-    resources :votes, only: [:create, :destroy]
+  resources :votes, only: [:create, :destroy]
   end
 
   root 'categories#index'
