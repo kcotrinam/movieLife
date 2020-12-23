@@ -8,9 +8,14 @@
 
 <div class="category-container">
 <% @categories.each do |cat| %>
+  <% if !cat.articles.empty? %>
   <div>
-    <%#= link_to 'show', category_path(cat) %>
+    <%= link_to "#{cat.name}", category_path(cat) %>
   </div>
+    <%= cat.articles.first.title %>
+  <%= image_tag(url_for(cat.articles.first.avatar)) %>
     <% end %>
+
+  <% end %>
 </div>
 
