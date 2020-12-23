@@ -1,1 +1,16 @@
 <h1 class="title">category show view</h1>
+
+<%= @category.name%>
+<% @articles.each do |art| %>
+  <div>
+    <%= art.title %>
+  </div>
+  <div>
+    <%= art.content %>
+  </div>
+  <div>
+    <%= image_tag(url_for(art.avatar)) %>
+  </div>
+  <%#= link_to 'Like', article_votes_path(votes: { user_id: current_user, article_id: art.id}), method: :post %>
+  <%= vote_unvote(art)%>
+<% end %>

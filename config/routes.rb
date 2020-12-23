@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   get 'sign_up', to: 'users#new'
 
   resources :users, only: [:new, :destroy, :create]
-  resources :articles
-  resources :categories do
-  resources :votes, only: [:create, :destroy]
+  resources :articles do
+    resources :votes, only: [:new, :create, :destroy]
   end
+  resources :categories 
 
   root 'categories#index'
 end
