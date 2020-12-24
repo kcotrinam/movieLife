@@ -1,40 +1,16 @@
-.category-container {
-  display: grid;
+.card-container {
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  
+
 }
 
-.category-card {
-  position: relative;
-  height: 250px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: hsla(0,0%,0%, .45);
-  }
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   & img {
+    object-fit: fill;
     width: 100%;
-    height: 100%;
-  }
-
-  &__name {
-    position: absolute;
-    left: 15%;
-    top: 15%;
-
-    font-size: 1.5rem;
-    color: white;
-
-  }
-
-  &__title {
-    position: absolute;
-    bottom: 10%;
-    left: calc(50% - 50px;
-    font-size: 2rem;
-    color: white;
   }
 }

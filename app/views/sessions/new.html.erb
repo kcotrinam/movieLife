@@ -1,8 +1,9 @@
-<h1 class="title has-text-centered">Sign in</h1>
-<%= form_tag sign_in_path do |f| %>
-  <div class="control mt-3">
-    <%= label_tag :username, nil, class: "label" %>
-    <%= text_field_tag :username, nil, class: "input" %>
-  </div>
-  <%= submit_tag nil, class: "button is-success mt-3" %>
-<% end %>
+<div class="form-container">
+  <%= form_tag sign_in_path, class: 'form' do |f| %>
+    <div class="control">
+      <%= label_tag :username, nil, class: "label | text-is-white" %>
+      <%= text_field_tag :username, nil, class: "input" %>
+    </div>
+    <%= submit_tag 'log in', class: "form__button | text-is-white" %>
+  <% end %>
+</div>
