@@ -1,11 +1,13 @@
-<%= form_with model: @category do |f| %>
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  <div>
-    <%= f.label :priority %>
-    <%= f.select :priority, [1, 2, 3, 4, 5] %>
-  </div>
-  <%= f.submit %>
-<% end %>
+<div class="form-container">
+  <%= form_with model: @category, class: 'form' do |f| %>
+    <div class="control">
+      <%= f.label :name, class: 'label | text-is-white' %>
+      <%= f.text_field :name, class: 'input' %>
+    </div>
+    <div class="control">
+      <%= f.label :priority, class: 'label | text-is-white' %>
+      <%= f.select :priority, [1, 2, 3, 4, 5], class: 'input' %>
+    </div>
+    <%= f.submit class: 'form__button | text-is-white' %>
+  <% end %>
+</div>

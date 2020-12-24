@@ -25,13 +25,20 @@
   position: relative;
   
   & *+* {
-    margin-top: .5rem;
+    margin-top: 0.75rem;
   }
 
   &__button {
-    background: royalblue;
+    background: rgb(43, 77, 182);
     border: none;
     padding: .5rem;
+    margin-top: 1.2rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(48, 89, 212);
+    }
   }
 }
 
@@ -41,6 +48,7 @@
 }
 
 .input,
-.input-area {
+.input-area,
+select {
   width: 100%;
 }
