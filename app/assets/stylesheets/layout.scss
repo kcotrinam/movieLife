@@ -1,9 +1,15 @@
 .main {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  height: 100vh;
 }
 
 .body {
   display: grid;
   grid-template-rows: 1fr 1fr;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

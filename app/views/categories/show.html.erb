@@ -1,15 +1,21 @@
-<h1 class="title">category show view</h1>
-
-<%= @category.name%>
-<% @articles.each do |art| %>
-  <div>
-    <%= art.title %>
-  </div>
-  <div>
-    <%= art.content %>
-  </div>
-  <div>
-    <%= image_tag(url_for(art.avatar)) %>
-  </div>
-  <%= vote_unvote(art)%>
-<% end %>
+<div class="card-container">
+  <% @articles.each do |art| %>
+    <article class="card">
+      <div class="card_info">
+      <h2 class="card__title">
+        <%= @category.name%>
+      </h2>
+        <div>
+          <%= art.title %>
+        </div>
+        <div>
+          <%= art.content %>
+        </div>
+        <%= vote_unvote(art)%>
+      </div>
+      <div>
+        <%= image_tag(url_for(art.avatar), class: 'card__image') %>
+      </div>
+    </article>
+  <% end %>
+</div>

@@ -1,19 +1,21 @@
-<%= form_with model: @article do |f| %>
+<div class="form-container">
+  <%= form_with model: @article, class: 'form' do |f| %>
+    <div class="control">
+      <%= f.label :title, class: 'label | text-is-white' %>
+      <%= f.text_field :title, class: 'input' %>
+    </div>
+    <div class="control">
+      <%= f.label :content, class: 'label | text-is-white' %>
+      <%= f.text_area :content, size: "25x9" ,class: 'input-area' %>
+    </div>
   <div class="control">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
+      <%= f.label :cover, class: 'label | text-is-white' %>
+      <%= f.file_field :avatar, class: 'input' %>
+    </div>
   <div class="control">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
- <div class="control">
-    <%= f.label :cover %>
-    <%= f.file_field :avatar %>
-  </div>
- <div class="control">
-    <%= f.label :category %>
-    <%= select_tag :categories, options_for_select(@categories) %>
-  </div>
-  <%= f.submit %>
-<% end %>
+      <%= f.label :category, class: 'label | text-is-white' %>
+      <%= select_tag :categories, options_for_select(@categories), class: 'input' %>
+    </div>
+    <%= f.submit class: 'form__button | text-is-white' %>
+  <% end %>
+</div>
