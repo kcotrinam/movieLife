@@ -1,10 +1,69 @@
-.nav {
+.navbar {
   display: grid;
   grid-template-columns: auto 1fr auto;
+  grid-gap: 0.5rem;
+
+  padding: 0.75rem;
+  background-color: hsl(226, 65%, 35%);
+  color: white;
+
+  &__brand {
+    font-size: 1.75rem;
+    text-decoration: none;
+  }
+
+  &__middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+
+
+    &-link {
+      display: block;
+      margin-top: .5rem;
+      padding: 0.5rem 1rem;
+    }
+
+    &-link:hover {
+      background-color:  hsla(226, 65%, 20%, 0.55);;
+    }
+  }
+
+  &__new-article {
+    display: block;
+  }
 }
 
-.navbar-start {
-  margin: 0 auto !important;
+.dropdown {
+  position: relative;
+  cursor: pointer;
+  margin-left: 1.5rem;
+  
+  &:hover > &-items {
+    display: block;
+  }
+  
+  &-items {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    display: none;
+    background-color:  hsla(226, 65%, 35%, 0.55);
+  }
+  
+}
+
+.navbar-item {
+  margin-left: 1.5rem;
+}
+
+.navbar__end {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+
+  &-name {
+  }
 }
