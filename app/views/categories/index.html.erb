@@ -1,7 +1,12 @@
 <main class="body">
-  <div class="poster">
+  <div class="banner">
     <%= link_to article_path(@voted_article) do %>
-    <%= image_tag(url_for(@voted_article.avatar)) %>
+    <%= image_tag(url_for(@voted_article.avatar), class: 'banner__img') %>
+    <div class="banner__content">
+      <h1 class="banner__content-title">
+        <%= @voted_article.title%>
+      </h1>
+    </div>
     <% end %>
   </div>
 
