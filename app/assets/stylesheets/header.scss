@@ -1,0 +1,26 @@
+// Place all the styles related to the Categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.poster,
+.poster-content {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 50vh;
+  
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+
+.poster-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white !important;
+}
