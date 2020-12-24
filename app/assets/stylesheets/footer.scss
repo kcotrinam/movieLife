@@ -1,0 +1,30 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0.9rem 1.5rem;
+  background-color: hsl(217, 47%, 52%);
+
+  &__logo {
+    font-size: 1.5rem;
+  }
+
+  &__middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__end {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__social {
+    display: flex;
+
+    &-link {
+      padding: 0.5rem;
+      font-size: 1.2rem;
+    }
+  }
+}

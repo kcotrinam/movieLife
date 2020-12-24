@@ -1,26 +1,26 @@
-<header class="poster">
-  <%= link_to article_path(@voted_article) do %>
-  <%= image_tag(url_for(@voted_article.avatar)) %>
-  </h2>
-
-  <% end %>
-</header>
-
-<section class="category-container">
-  <% @categories.each do |cat| %>
-    <% if !cat.articles.empty? %>
-      <div class="category-card">
-        <%= link_to category_path(cat) do%>
-          <%= image_tag(url_for(cat.articles.first.avatar)) %>
-            <h2 class="category-card__name">
-              <%= cat.name %>
-            </h2>
-            <h3 class="category-card__title">
-              <%= cat.articles.first.title %>
-            </h3>
-        <% end %>
-      </div>
+<main class="body">
+  <div class="poster">
+    <%= link_to article_path(@voted_article) do %>
+    <%= image_tag(url_for(@voted_article.avatar)) %>
     <% end %>
-  <% end %>
-</section>
+  </div>
+
+  <section class="category-container">
+    <% @categories.each do |cat| %>
+      <% if !cat.articles.empty? %>
+        <div class="category-card">
+          <%= link_to category_path(cat) do%>
+            <%= image_tag(url_for(cat.articles.first.avatar)) %>
+              <h2 class="category-card__name">
+                <%= cat.name %>
+              </h2>
+              <h3 class="category-card__title">
+                <%= cat.articles.first.title %>
+              </h3>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </section>
+</main>
 
