@@ -1,19 +1,22 @@
 <div class="card-container">
   <% @articles.each do |art| %>
     <article class="card">
-      <div class="card_info">
+      <%= image_tag(url_for(art.avatar), class: 'card__image') %>
+      <div class="card__info">
         <h2 class="card__title">
           <%= @category.name%>
         </h2>
-        <div>
+        <div class="card__subtitle">
           <%= art.title %>
         </div>
         <div>
-          <%= art.content %>
+          <p class="card__content">
+            <%= card_content(art.content) %>
+          </p>
+          <%= link_to 'Read more', article_path(art.id), class: 'card__read-more' %>
         </div>
-        <%= vote_unvote(art)%>
+        <%= vote_unvote(art) %>
       </div>
-      <%= image_tag(url_for(art.avatar), class: 'card__image') %>
     </article>
   <% end %>
 </div>

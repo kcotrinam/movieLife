@@ -5,4 +5,9 @@ module CategoriesHelper
     Category.for_navbar
   end
 
+  def card_content(content)
+    truncated_text = content[0..50]
+    return "#{truncated_text}..."
+  end
+  
 end
