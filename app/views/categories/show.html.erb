@@ -1,7 +1,7 @@
 <div class="card-container">
   <% @articles.each do |art| %>
     <article class="card">
-      <%= image_tag(url_for(art.avatar), class: 'card__image') %>
+      <%= image_tag(url_for(display_image(art)), class: 'card__image') %>
       <div class="card__info">
         <h2 class="card__title">
           <%= @category.name%>

@@ -22,4 +22,13 @@ module ArticlesHelper
     end
   end
   
+  def first_article_category(category)
+    first_article = category.articles.first
+    if first_article.avatar.atached?
+      first_article.avatar
+    else
+      "#{first_article.cover}"
+    end
+  end
+  
 end
