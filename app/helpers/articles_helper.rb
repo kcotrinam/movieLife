@@ -13,4 +13,13 @@ module ArticlesHelper
       end
     end
   end
+
+  def display_image(image)
+    if image.avatar.attached?
+      @article.avatar
+    else
+      "#{image.cover}"
+    end
+  end
+  
 end

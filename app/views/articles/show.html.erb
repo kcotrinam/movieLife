@@ -1,12 +1,11 @@
-<h1 class="title">show</h1>
   <div>
+    <div>
+      <%= image_tag(url_for(display_image(@article))) %>
+    </div>
     <h2 class="title">
       <%= @article.title %>
     </h2>
     <div class="content">
       <%= @article.content %>
-    </div>
-    <div>
-      <%= image_tag(url_for(@article.avatar)) %>
     </div>
   </div>

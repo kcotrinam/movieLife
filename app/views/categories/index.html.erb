@@ -1,7 +1,7 @@
 <main class="body">
   <div class="banner">
     <%= link_to article_path(@voted_article) do %>
-    <%= image_tag(url_for(@voted_article.avatar), class: 'banner__img') %>
+    <%#= image_tag(url_for(@voted_article.avatar), class: 'banner__img') %>
     <div class="banner__content">
       <h1 class="banner__content-title">
         <%= @voted_article.title%>
@@ -15,7 +15,7 @@
       <% if !cat.articles.empty? %>
         <div class="category-card">
           <%= link_to category_path(cat) do%>
-            <%= image_tag(url_for(cat.articles.first.avatar)) %>
+            <%#= image_tag(url_for(cat.articles.first.avatar)) %>
               <h2 class="category-card__name">
                 <%= cat.name %>
               </h2>
