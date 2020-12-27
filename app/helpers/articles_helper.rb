@@ -18,17 +18,16 @@ module ArticlesHelper
     if image.avatar.attached?
       image.avatar
     else
-      "#{image.cover}"
+      image.cover.to_s
     end
   end
-  
+
   def first_article_category(category)
     first_article = category.articles.first
     if first_article.avatar.atached?
       first_article.avatar
     else
-      "#{first_article.cover}"
+      first_article.cover.to_s
     end
   end
-  
 end

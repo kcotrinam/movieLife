@@ -8,5 +8,4 @@ class Article < ApplicationRecord
   has_many :voters, through: :votes, class_name: 'User'
 
   scope :get_most_votes, -> { joins(:votes).group('articles.id').order('count(votes.id) desc').first }
-
 end
