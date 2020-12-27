@@ -70,3 +70,27 @@ a {
 .text-is-white {
 	color: #fff;
 }
+
+.btn-danger {
+	background-color: red;
+	
+	&:hover {
+		background-color: darken(red, 10)
+	}
+}
+
+.btn-warning {
+	background-color: #FF9900;
+	
+	&:hover {
+		background-color: darken(#FF9900, 10)
+	}
+}
+
+.btn-regular {
+	background-color:  #336699;
+	
+	&:hover {
+		background-color: darken(#336699, 10)
+	}
+}

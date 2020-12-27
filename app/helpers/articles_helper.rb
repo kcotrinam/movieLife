@@ -16,7 +16,7 @@ module ArticlesHelper
 
   def display_image(image)
     if image.avatar.attached?
-      @article.avatar
+      image.avatar
     else
       "#{image.cover}"
     end
