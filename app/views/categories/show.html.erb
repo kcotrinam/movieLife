@@ -11,12 +11,16 @@
         </div>
         <div>
           <p class="card__content">
-            <%= card_content(art.content) %>
+            <%= truncated_card_content(art.content) %>
           </p>
-          <%= link_to 'Read more', article_path(art.id), class: 'card__read-more' %>
+            <%= link_to 'Read more', article_path(art.id), class: 'card__read-more' %>
         </div>
-        <div>
-        <%= vote_unvote(art) %>
+        <div class='card__vote'>
+          <%= vote_unvote(art) %>
+          <span>
+            <%= art.votes.count %>
+            votes
+          </span>
         </div>
       </div>
     </article>

@@ -8,7 +8,7 @@ module ArticlesHelper
         raw '<i class="fas fa-thumbs-down fa-thumbs"></i>'
       end
     else
-      link_to article_votes_path(article_id: article.id), class: 'card__vote', method: :post do
+      link_to article_votes_path(article_id: article.id), method: :post do
         raw '<i class="fas fa-thumbs-up fa-thumbs"></i>'
       end
     end
