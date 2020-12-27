@@ -30,4 +30,8 @@ module ArticlesHelper
       first_article.cover.to_s
     end
   end
+
+  def writer_user?(article_writer)
+    return true if current_user.id == article_writer.author.id
+  end
 end
