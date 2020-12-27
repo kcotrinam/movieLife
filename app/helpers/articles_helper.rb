@@ -1,6 +1,5 @@
 module ArticlesHelper
   def vote_unvote(article)
-    # store_location
     @vote = Vote.find_by(user_id: current_user.id, article_id: article.id)
 
     if @vote
