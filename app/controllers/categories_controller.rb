@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!, only: [:show]
+
   def index
     @categories = Category.all.order(priority: :desc)
     @voted_article = Article.get_most_votes
@@ -44,4 +46,6 @@ class CategoriesController < ApplicationController
   def category_params
     params.require(:category).permit(:name, :priority)
   end
+
+ 
 end
