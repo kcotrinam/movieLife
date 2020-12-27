@@ -15,7 +15,9 @@
           </p>
           <%= link_to 'Read more', article_path(art.id), class: 'card__read-more' %>
         </div>
+        <div>
         <%= vote_unvote(art) %>
+        </div>
       </div>
     </article>
   <% end %>
