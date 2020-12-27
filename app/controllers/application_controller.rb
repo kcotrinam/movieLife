@@ -11,9 +11,8 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
   def authenticate_user!
-    if !current_user
-      redirect_to sign_in_path
-    end
+    redirect_to sign_in_path unless current_user
   end
 end

@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :create, :new]
+  before_action :authenticate_user!, only: %i[show create new]
 
   def index
     @categories = Category.all.order(priority: :desc)
@@ -46,6 +46,4 @@ class CategoriesController < ApplicationController
   def category_params
     params.require(:category).permit(:name, :priority)
   end
-
- 
 end
