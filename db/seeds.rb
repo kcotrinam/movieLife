@@ -296,3 +296,23 @@ Vote.create(
   user_id: User.find_by(name: 'user1').id,
   article_id: Article.third.id
 )
+
+Vote.create(
+  user_id: User.find_by(name: 'user1').id,
+  article_id: Article.find_by(title: "Free willy").id
+)
+
+Vote.create(
+  user_id: User.find_by(name: 'user2').id,
+  article_id: Article.find_by(title: "Free willy").id
+)
+
+Vote.create(
+  user_id: User.find_by(name: 'user3').id,
+  article_id: Article.find_by(title: "Free willy").id
+)
+
+Vote.create(
+  user_id: User.find_by(name: 'user4').id,
+  article_id: Article.find_by(title: "Free willy").id
+)

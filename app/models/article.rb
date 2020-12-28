@@ -1,7 +1,7 @@
 class Article < ApplicationRecord
   validates :author_id, :title, :content, presence: true
-  validates :title, length: {minimum:3, maximum:20}
-  validates :content, length: {minimum:10, maximum:70}
+  validates :title, length: {minimum:3}
+  validates :content, length: {minimum:10}
   
 
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
