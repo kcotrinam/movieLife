@@ -25,6 +25,7 @@
 
 - Ruby ruby 2.7.2p137
 - Ruby on Rails 6.1
+- Postgresql
 
 
 ## :construction_worker: Getting Started
@@ -41,10 +42,11 @@ To get a local copy up and running follow these simple steps:
 2. On the terminal navigate to the project directory using `cd movieLife/`.
 3. Install dependencies using: `bundle install`.
 3. If it required: `bundle update`.
-4. Migrate the database: `rails db:migrate`.
-5. If required run: `yarn install`, and repeate the step 4.
-6. Start the application : `rails server`.
-7. To Stop the application : Press `Ctrl + c`
+4. Migrate the database: `rails db:create`.
+5. Migrate the database: `rails db:migrate`.
+6. If required run: `yarn install`, and repeate the step 4.
+7. Start the application : `rails server`.
+8. To Stop the application : Press `Ctrl + c`
 
 ## 📝 How to use the application?
 
