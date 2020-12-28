@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: auto 1fr auto;
   grid-gap: 0.5rem;
-
   padding: 0.75rem;
   background-color: hsl(226, 65%, 35%);
   color: white;
@@ -18,15 +17,14 @@
     align-items: center;
     font-size: 1.5rem;
 
-
     &-link {
       display: block;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
       padding: 0.5rem 1rem;
     }
 
     &-link:hover {
-      background-color:  hsla(226, 65%, 20%, 0.55);;
+      background-color: hsla(226, 65%, 20%, 0.55);
     }
   }
 
@@ -39,19 +37,18 @@
   position: relative;
   cursor: pointer;
   margin-left: 1.5rem;
-  
-  &:hover > &-items {
-    display: block;
-  }
-  
+
   &-items {
     position: absolute;
     left: 0;
     z-index: 100;
     display: none;
-    background-color:  hsla(226, 65%, 35%, 0.55);
+    background-color: hsla(226, 65%, 35%, 0.55);
   }
-  
+
+  &:hover > &-items {
+    display: block;
+  }
 }
 
 .navbar-item {
@@ -63,7 +60,4 @@
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-
-  &-name {
-  }
 }
