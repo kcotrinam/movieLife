@@ -19,7 +19,7 @@ module ArticlesHelper
     elsif image.cover
       image.cover.to_s
     else
-       "default-image.jpg"
+      'default-image.jpg'
     end
   end
 
