@@ -7,6 +7,14 @@
 ![screenshot](app/assets/images/screenshot.png)
 ![screenshot](app/assets/images/screenshot2.png)
 
+## :video_camera: Video Demo
+
+[Video Demo Link](https://www.loom.com/share/76c2e590dc244714a52709957e7c8991)
+
+## :red_circle: Live Demo:
+
+[Live Demo Link](http://movielife.herokuapp.com//)
+
 ## :hammer: Built with
 
 - Ruby
@@ -44,9 +52,10 @@ To get a local copy up and running follow these simple steps:
 3. If it required: `bundle update`.
 4. Migrate the database: `rails db:create`.
 5. Migrate the database: `rails db:migrate`.
-6. If required run: `yarn install`, and repeate the step 4.
-7. Start the application : `rails server`.
-8. To Stop the application : Press `Ctrl + c`
+6. Migrate the database: `rails db:seed`.
+7. If required run: `yarn install`, and repeate the step 4.
+8. Start the application : `rails server`.
+9. To Stop the application : Press `Ctrl + c`
 
 ## 📝 How to use the application?
 
