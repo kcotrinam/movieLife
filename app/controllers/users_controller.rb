@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = 'User successfully created'
-      session[:user_id] = @user_id
+      session[:user_id] = @user.id
       redirect_to root_url
     else
       flash[:error] = 'Something went wrong'

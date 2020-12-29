@@ -16,14 +16,16 @@ module ArticlesHelper
   def display_image(image)
     if image.avatar.attached?
       image.avatar
-    else
+    elsif image.cover
       image.cover.to_s
+    else
+       "default-image.jpg"
     end
   end
 
   def first_article_category(category)
     first_article = category.articles.first
-    if first_article.avatar.atached?
+    if first_article.avatar.attached?
       first_article.avatar
     else
       first_article.cover.to_s
