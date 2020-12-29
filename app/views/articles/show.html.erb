@@ -1,6 +1,7 @@
   <article class="art-card">
     <div class="art-card__img">
       <%= image_tag(url_for(display_image(@article))) %>
+      <%= @article.id %>
     </div>
     <h2 class="art-card__title">
       <%= @article.title %>

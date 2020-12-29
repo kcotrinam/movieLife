@@ -2,7 +2,7 @@ class VotesController < ApplicationController
   def new; end
 
   def create
-    @vote = Vote.new(article_id: params[:article_id], user_id: current_user.id)
+    @vote = current_user.votes.new(article_id: params[:article_id])
 
     if @vote.save
       flash[:success] = 'Vote successfully created'
