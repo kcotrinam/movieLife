@@ -16,7 +16,7 @@
             <%= link_to 'Read more', article_path(art.id), class: 'card__read-more' %>
         </div>
         <div class='card__vote'>
-          <%= vote_unvote(art) %>
+          <%= display_vote(art) %>
           <span>
             <%= art.votes.count %>
             votes

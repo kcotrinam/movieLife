@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!, only: %i[show create new]
+  before_action :authenticate_user!, only: %i[ create new]
 
   def index
     @categories = Category.all.order(priority: :desc)
