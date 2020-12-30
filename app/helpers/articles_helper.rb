@@ -1,5 +1,4 @@
 module ArticlesHelper
-  
   def display_vote(article)
     if user_signed_in?
       vote_unvote(article)
@@ -9,11 +8,10 @@ module ArticlesHelper
       end
     end
   end
-  
 
   def vote_unvote(article)
     @vote = Vote.find_by(user_id: current_user.id, article_id: article.id)
-    
+
     if @vote
       link_to article_vote_path(article_id: article.id, id: @vote.id), class: 'card__vote', method: :delete do
         raw '<i class="fas fa-thumbs-down fa-thumbs"></i>'
