@@ -24,7 +24,7 @@
     }
 
     &-link:hover {
-      background-color: hsla(226, 65%, 20%, 0.55);
+      background-color: hsl(0, 0%, 67%);
     }
   }
 
@@ -43,7 +43,7 @@
     left: 0;
     z-index: 100;
     display: none;
-    background-color: hsla(226, 65%, 35%, 0.55);
+    background-color: hsla(0, 0%, 77%, 0.85);
   }
 
   &:hover > &-items {
