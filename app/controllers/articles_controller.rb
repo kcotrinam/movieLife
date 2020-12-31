@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!
+  before_action :find_article, only: %i[show update destroy]
 
   def index
     @articles = Article.all
@@ -25,7 +26,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
+    # @article = Article.find(params[:id])
     @votes = @article.votes.count
   end
 
@@ -35,7 +36,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
+    # @article = Article.find(params[:id])
     @categories = Category.all.map { |c| [c.name, c.id] }
     if @article.update(article_params)
       @article.artcats.first.delete
@@ -49,7 +50,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
+    # @article = Article.find(params[:id])
     if @article.destroy
       flash[:success] = 'Article was successfully deleted.'
     else
@@ -62,5 +63,9 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :content, :avatar)
+  end
+
+  def find_article
+     @article = Article.find(params[:id])
   end
 end

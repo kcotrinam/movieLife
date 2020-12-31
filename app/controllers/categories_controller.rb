@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!, only: %i[create new]
+  before_action :find_category, only: %i[show edit update]
 
   def index
     @categories = Category.all.order(priority: :desc)
@@ -22,16 +23,12 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
     @articles = @category.articles
   end
 
-  def edit
-    @category = Category.find(params[:id])
-  end
+  def edit;end
 
   def update
-    @category = Category.find(params[:id])
     if @category.update_attributes(category_params)
       flash[:success] = 'Category was successfully updated'
       redirect_to @category
@@ -45,5 +42,9 @@ class CategoriesController < ApplicationController
 
   def category_params
     params.require(:category).permit(:name, :priority)
+  end
+
+  def find_category
+    @category = Category.find(params[:id])
   end
 end
