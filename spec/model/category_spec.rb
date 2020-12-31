@@ -16,6 +16,6 @@ RSpec.describe Category, type: :model do
 
   describe 'associations' do
     it { should have_many(:artcats).dependent(:destroy) }
-    it { should have_many(:articles).order('created_at asc').through(:artcats) }
+    it { should have_many(:articles).order('created_at desc').through(:artcats) }
   end
 end

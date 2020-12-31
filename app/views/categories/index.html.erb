@@ -1,34 +1,5 @@
-<main class="body">
-  <div class="banner">
-    <%= link_to article_path(@voted_article) do %>
-    <%= image_tag(url_for(display_image(@voted_article)), class: 'banner__img') %>
-    <div class="banner__content">
-      <h1 class="banner__content-title">
-        <%= @voted_article.title %>
-      </h1>
-      <p class="banner__content-description">
-        <%= truncated_card_content(@voted_article.content) %>
-      </p>
-    </div>
-    <% end %>
-  </div>
+<main>
+  <%= render 'header' %>
 
-  <section class="category-container">
-    <% @categories.each do |cat| %>
-      <% if !cat.articles.empty? %>
-        <div class="category-card">
-          <%= link_to category_path(cat) do%>
-            <%= image_tag(url_for(first_article_category(cat))) %>
-              <h2 class="category-card__name">
-                <%= cat.name %>
-              </h2>
-              <h3 class="category-card__title">
-                <%= cat.articles.first.title %>
-              </h3>
-          <% end %>
-        </div>
-      <% end %>
-    <% end %>
-  </section>
+  <%= render 'categories' %>
 </main>
-

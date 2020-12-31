@@ -16,8 +16,11 @@
   <body>
     <div class="main">
       <%= render 'common/navbar' %>
-  
-        <%= yield %>
+      <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "flash #{key}" %>
+      <% end %>
+      
+      <%= yield %>
 
       <%= render 'common/footer' %>
     </div>

@@ -1,0 +1,13 @@
+<div class="banner">
+  <%= link_to article_path(@voted_article) do %>
+  <%= image_tag(url_for(display_image(@voted_article)), class: 'banner__img') %>
+  <div class="banner__content">
+    <h1 class="banner__content-title">
+      <%= @voted_article.title %>
+    </h1>
+    <p class="banner__content-description">
+      <%= truncated_card_content(@voted_article.content) %>
+    </p>
+  </div>
+  <% end %>
+</div>

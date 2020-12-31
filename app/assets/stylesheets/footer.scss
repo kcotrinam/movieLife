@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 0.9rem 1.5rem;
-  background-color: hsl(217, 47%, 52%);
+  background-color: hsl(0, 0%, 85%);
+  border-top: 1px solid #000;
 
   &__logo {
     font-size: 1.5rem;

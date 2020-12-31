@@ -1,13 +1,14 @@
 .main {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto auto;
   min-height: 100vh;
+  background: radial-gradient(black, transparent);
 }
 
-.body {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-}
+// .body {
+//   display: grid;
+//   grid-template-rows: 1fr 1fr;
+// }
 
 .card {
   display: grid;

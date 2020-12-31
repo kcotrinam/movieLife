@@ -1,4 +1,13 @@
+ 
+
 <div class="form-container">
+  <% if @user.errors.any? %>
+    <ul class="errors_list">
+      <% @user.errors.full_messages.each do |msg| %>
+        <li class="errors_list-item"><%= msg %></li>
+      <% end%>
+    </ul>
+  <% end %>
   <%= form_with model: @user, class: 'form' do |f| %>
     <div class="control">
       <%= f.label :name, class: "label | text-is-white" %>
