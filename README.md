@@ -4,8 +4,7 @@
 
 > This project displays on the main page the most voted article and below it dsiaplys the categories which are currently available. This application allows you to create new users, new categories and new article with their own picture. Every user who is logged-in can vote for their favorite article.
 
-![screenshot](app/assets/images/screenshot.png)
-![screenshot](app/assets/images/screenshot2.png)
+![screenshot](app/assets/images/mockup.jpg)
 
 ## :video_camera: Video Demo
 
@@ -13,7 +12,7 @@
 
 ## :red_circle: Live Demo:
 
-[Live Demo Link](http://movielife.herokuapp.com//)
+[Live Demo Link](http://movielife.herokuapp.com/)
 
 ## :hammer: Built with
 
@@ -40,9 +39,10 @@
 
 To get a local copy up and running follow these simple steps:
 
-- Go to the [repository page](https://github.com/kcotrinam/movieLife/).
-- Press the "Code" button and get the repo link.
-- Clone it using git command `git clone <link>`.
+1. Go to the [repository page](https://github.com/kcotrinam/movieLife/).
+2. Press the "Code" button and copy the link.
+3. Clone it using git command `git clone <link>`.
+4. Follow 'Setup' steps.
 
 ## 📝 Setup
 
@@ -53,19 +53,17 @@ To get a local copy up and running follow these simple steps:
 4. Migrate the database: `rails db:create`.
 5. Migrate the database: `rails db:migrate`.
 6. Migrate the database: `rails db:seed`.
-7. If required run: `yarn install`, and repeate the step 4.
+7. If required run: `yarn install`, and repeate step 4.
 8. Start the application : `rails server`.
 9. To Stop the application : Press `Ctrl + c`
 
 ## 📝 How to use the application?
 
-- Start the application : `rails server`.
-
-- Open the browser and go to : `http://localhost:3000/`
-
-- Create a new user.
-
-- Log-in with `user1, user2, user3 or user4`.
+1. Open the terminal and go to the directory.
+2. Start the application : `rails server`.
+3. Open the browser and go to : `http://localhost:3000/`
+4. Optional: use the [live version link](http://movielife.herokuapp.com//)
+4. Enjoy the different functions the App has.
 
 ## :bust_in_silhouette: Author
 
@@ -87,9 +85,10 @@ Give a ⭐️ if you like this project!
 
 ## :grey_exclamation: Acknowledgment
 
-- [Rails Guides](https://guides.rubyonrails.org/)
-- [Shoulda Matchers](https://matchers.shoulda.io/docs/v4.4.1/index.html)
-- Stack Overflow
+- Nelson Sakwa on Behance for the [original design](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version).
+- [Rails Guides](https://guides.rubyonrails.org/).
+- [Shoulda Matchers](https://matchers.shoulda.io/docs/v4.4.1/index.html).
+- Stack Overflow.
 - Odin Project.
 
  ## 📝 License
