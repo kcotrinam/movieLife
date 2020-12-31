@@ -182,10 +182,25 @@ a {
   }
 }
 
-.warning {
+.error {
   color: #fff;
   position: relative;
   background: red;
   margin-bottom: 1.2rem;
   padding: 0.5rem;
+}
+
+.flash-success,
+.flash-errors {
+  color: #fff;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.flash-success {
+  background: green;
+}
+
+.flash-errors {
+  background: red;
 }

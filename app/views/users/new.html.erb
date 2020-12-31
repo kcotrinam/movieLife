@@ -1,7 +1,7 @@
  
 
 <div class="form-container">
-  <%= render partial: 'errors', locals: {user: @user} %>
+  <%= render partial: 'common/errors', locals: {msgs: @user} %>
   <%= form_with model: @user, class: 'form' do |f| %>
     <div class="control">
       <%= f.label :name, class: "label | text-is-white" %>

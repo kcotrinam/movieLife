@@ -1,4 +1,5 @@
 <div class="form-container">
+  <%= render partial: 'common/errors', locals: {msgs: @category} %>
   <%= form_with model: @category, class: 'form' do |f| %>
     <div class="control">
       <%= f.label :name, class: 'label | text-is-white' %>
