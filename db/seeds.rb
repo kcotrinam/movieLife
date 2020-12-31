@@ -30,7 +30,7 @@ User.create(
 
 # article seeds
 
-a1 = Article.create(
+Article.create(
   author_id: User.find_by(name: 'user1').id,
   title: "Life is beautiful",
   content: "Life is beautiful is a 1997 Italian comedy-drama film directed by and starring Roberto Benigni, who co-wrote the film with Vincenzo Cerami. Benigni plays Guido Orefice, a Jewish Italian bookshop owner, who employs his fertile imagination to shield his son from the horrors of internment in a Nazi concentration camp. The film was partially inspired by the book In the End, I Beat Hitler by Rubino Romeo Salmonì and by Benigni's father, who spent two years in a German labour camp during World War II.
