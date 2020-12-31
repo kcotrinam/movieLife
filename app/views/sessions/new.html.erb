@@ -1,4 +1,5 @@
 <div class="form-container">
+    <%= render 'common/flash' %>
   <%= form_tag sign_in_path, class: 'form' do |f| %>
     <div class="control">
       <%= label_tag :username, nil, class: "label | text-is-white" %>

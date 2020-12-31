@@ -1,14 +1,15 @@
 class SessionsController < ApplicationController
-  def new; end
+  def new
+    user = User.find_by_username(params[:username])
+  end
 
   def create
     user = User.find_by_username(params[:username])
     if user
       session[:user_id] = user.id
-      redirect_to root_path, notice: 'Logged in successfully!'
+      redirect_to root_path, flash: {access: "Successfully logged-in!"}
     else
-      flash.now[:alert] = "Username doesn't exist"
-      render new
+      redirect_to sign_in_path, flash: {warning: "Username doesn't exist"}
     end
   end
 
