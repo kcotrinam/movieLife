@@ -4,8 +4,8 @@
   grid-template-rows: auto auto auto 1fr auto;
   grid-gap: 0.75rem;
   padding: 0.75rem;
-  background: rgb(2,0,36);
-background: linear-gradient(39deg, rgba(2,0,36,1) 0%, rgba(126,125,143,0.5046393557422969) 0%, rgba(255,255,255,1) 47%, rgba(255,255,255,0.14889705882352944) 100%);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(39deg, rgba(2, 0, 36, 1) 0%, rgba(126, 125, 143, 0.5046393557422969) 0%, rgba(255, 255, 255, 1) 47%, rgba(255, 255, 255, 0.14889705882352944) 100%);
 
   &__img {
     grid-column: 2;
