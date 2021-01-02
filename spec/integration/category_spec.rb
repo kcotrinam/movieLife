@@ -1,4 +1,3 @@
-  
 require 'rails_helper'
 
 RSpec.describe 'Create a new User', type: :feature do
@@ -14,8 +13,8 @@ RSpec.describe 'Create a new User', type: :feature do
     )
     Article.create(
       author_id: User.first.id,
-      title: "Test Article",
-      content: "description fo the test article",
+      title: 'Test Article',
+      content: 'description fo the test article',
       cover: 'img1.jpg'
     )
     Artcat.create(
@@ -35,20 +34,20 @@ RSpec.describe 'Create a new User', type: :feature do
     click_on 'log in'
     visit categories_path
     click_on 'New category'
-    fill_in "Name",	with: "Category"
+    fill_in 'Name', with: 'Category'
     click_on 'Create Category'
     visit categories_path
 
     expect(page).to have_content('Category')
   end
-  
+
   scenario 'invalid title' do
     visit sign_in_path
     fill_in 'Username', with: 'user1'
     click_on 'log in'
     visit categories_path
     click_on 'New category'
-    fill_in "Name",	with: ""
+    fill_in 'Name', with: ''
     click_on 'Create Category'
 
     expect(page).to have_content("Name can't be blank")
@@ -59,6 +58,6 @@ RSpec.describe 'Create a new User', type: :feature do
     click_on 'New category'
     visit sign_in_path
 
-    expect(page).to have_content("Username")
+    expect(page).to have_content('Username')
   end
 end

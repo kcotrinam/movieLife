@@ -27,7 +27,7 @@ class CategoriesController < ApplicationController
     @articles = @category.articles
   end
 
-  def edit;end
+  def edit; end
 
   def update
     if @category.update_attributes(category_params)

@@ -1,4 +1,3 @@
-  
 require 'rails_helper'
 
 RSpec.describe 'Create a new User', type: :feature do
@@ -14,8 +13,8 @@ RSpec.describe 'Create a new User', type: :feature do
     )
     Article.create(
       author_id: User.first.id,
-      title: "Test Article",
-      content: "description fo the test article",
+      title: 'Test Article',
+      content: 'description fo the test article',
       cover: 'img1.jpg'
     )
     Artcat.create(
@@ -35,35 +34,35 @@ RSpec.describe 'Create a new User', type: :feature do
     click_on 'log in'
     visit categories_path
     click_on 'New Article'
-    fill_in "Title",	with: "New title"
-    fill_in "Content",	with: "This is the new content test of the new article created" 
+    fill_in 'Title', with: 'New title'
+    fill_in 'Content', with: 'This is the new content test of the new article created'
     click_on 'Create Article'
     visit categories_path
 
     expect(page).to have_content('New title')
   end
-  
+
   scenario 'invalid content' do
     visit sign_in_path
     fill_in 'Username', with: 'user1'
     click_on 'log in'
     visit categories_path
     click_on 'New Article'
-    fill_in "Title",	with: "New title"
-    fill_in "Content",	with: "" 
+    fill_in 'Title', with: 'New title'
+    fill_in 'Content', with: ''
     click_on 'Create Article'
 
     expect(page).to have_content("Content can't be blank")
   end
-  
+
   scenario 'invalid title' do
     visit sign_in_path
     fill_in 'Username', with: 'user1'
     click_on 'log in'
     visit categories_path
     click_on 'New Article'
-    fill_in "Title",	with: ""
-    fill_in "Content",	with: "This is the new content test for the new title" 
+    fill_in 'Title', with: ''
+    fill_in 'Content', with: 'This is the new content test for the new title'
     click_on 'Create Article'
 
     expect(page).to have_content("Title can't be blank")
@@ -74,7 +73,6 @@ RSpec.describe 'Create a new User', type: :feature do
     click_on 'New Article'
     visit sign_in_path
 
-    expect(page).to have_content("Username")
+    expect(page).to have_content('Username')
   end
-  
 end
