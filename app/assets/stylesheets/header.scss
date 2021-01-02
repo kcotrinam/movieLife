@@ -27,6 +27,12 @@ main {
     justify-content: flex-end;
     color: #fff;
     margin-left: 5%;
+    font-size: 2.5ch;
+  }
+
+  &__content-title {
+    font-size: 5.5ch;
+    margin-bottom: 1.2rem;
   }
 
   &__content-description {
