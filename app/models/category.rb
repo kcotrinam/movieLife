@@ -6,9 +6,9 @@ class Category < ApplicationRecord
   has_many :articles, -> { includes(:avatar_attachment).order('created_at desc') }, through: :artcats
 
   scope :for_navbar, -> { limit(5) }
-  
+
   def first_article
-    arr = self.articles.includes(:avatar_attachment).order(created_at: :desc).first
+    arr = articles.includes(:avatar_attachment).order(created_at: :desc).first
     arr
   end
 end
