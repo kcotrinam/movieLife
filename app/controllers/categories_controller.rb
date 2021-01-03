@@ -3,8 +3,8 @@ class CategoriesController < ApplicationController
   before_action :find_category, only: %i[show edit update]
 
   def index
-    @categories = Category.all.includes(:articles).order(priority: :desc)
     # @categories = Category.all.order(priority: :desc)
+    @categories = Category.all.includes(:articles).order(priority: :desc)
     @voted_article = Article.get_most_votes
   end
 

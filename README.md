@@ -8,7 +8,7 @@
 
 ## :video_camera: Video Demo
 
-[Video Demo Link](https://www.loom.com/share/76c2e590dc244714a52709957e7c8991)
+[Video Demo Link](https://www.loom.com/share/1146be0e62cb47f99d91aee19e567467)
 
 ## :red_circle: Live Demo:
 
