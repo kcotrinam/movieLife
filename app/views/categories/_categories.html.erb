@@ -2,7 +2,7 @@
     <% @categories.each do |cat| %>
       <% if !cat.articles.empty? %>
         <div class="category-card">
-          <%= link_to category_path(cat) do%>
+          <%= link_to category_path(cat) do %>
             <%= image_tag(url_for(first_article_category(cat))) %>
               <h2 class="category-card__name">
                 <%= cat.name %>
