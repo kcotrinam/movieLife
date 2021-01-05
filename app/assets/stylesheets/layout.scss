@@ -1,0 +1,16 @@
+.main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  background: radial-gradient(black, transparent);
+}
+
+// .body {
+//   display: grid;
+//   grid-template-rows: 1fr 1fr;
+// }
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

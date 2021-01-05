@@ -1,0 +1,34 @@
+  <article class="art-card">
+    <div class="art-card__img">
+      <%= image_tag(url_for(display_image(@article))) %>
+    </div>
+    <h2 class="art-card__title">
+      <%= @article.title %>
+      <p class="art-card__category">
+        <%= @article.categories.first.name %>
+      </p>
+    </h2>
+    <div class="art-card__likes">
+      <%= vote_unvote(@article) %>
+      <p>
+        <%= @votes %>
+        <span>votes</span>
+      </p>
+    </div>
+    <p class="art-card__content">
+      <%= @article.content %>
+    </p>
+    <div class="art-card__footer">
+      <p class="art-card__author">
+        Article Written by
+        <span><%= @article.author.name %></span>
+      </p>
+      <div class="art-card__buttons">
+        <%= link_to 'back', category_path(@article.categories.first.id), class: 'art-card__button-link btn-regular' %>
+        <% if writer_user?(@article)%>
+        <%= link_to 'Edit', edit_article_path(@article.id), class: 'art-card__button-link btn-warning' %>
+        <%= link_to 'Delete', article_path(@article.id), method: :delete, class: 'art-card__button-link btn-danger' %>
+        <% end %>
+      </div>
+    </div>
+  </article>

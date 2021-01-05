@@ -1,0 +1,14 @@
+<div class="form-container">
+  <%= render partial: 'common/errors', locals: {msgs: @category} %>
+  <%= form_with model: @category, class: 'form' do |f| %>
+    <div class="control">
+      <%= f.label :name, class: 'label | text-is-white' %>
+      <%= f.text_field :name, class: 'input' %>
+    </div>
+    <div class="control">
+      <%= f.label :priority, class: 'label | text-is-white' %>
+      <%= f.select :priority, [1, 2, 3, 4, 5], class: 'input' %>
+    </div>
+    <%= f.submit class: 'form__button | text-is-white' %>
+  <% end %>
+</div>

@@ -1,0 +1,41 @@
+
+main {
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner {
+  height: 75vh;
+  position: relative;
+
+  &__img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    color: #fff;
+    margin-left: 5%;
+    font-size: 2.5ch;
+  }
+
+  &__content-title {
+    font-size: 5.5ch;
+    margin-bottom: 1.2rem;
+  }
+
+  &__content-description {
+    margin-bottom: 5%;
+  }
+}

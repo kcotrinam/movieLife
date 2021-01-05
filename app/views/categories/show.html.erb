@@ -1,0 +1,28 @@
+<div class="card-container">
+  <% @articles.each do |art| %>
+    <article class="card">
+      <%= image_tag(url_for(display_image(art)), class: 'card__image') %>
+      <div class="card__info">
+        <h2 class="card__title">
+          <%= @category.name%>
+        </h2>
+        <div class="card__subtitle">
+          <%= art.title %>
+        </div>
+        <div>
+          <p class="card__content">
+            <%= truncated_card_content(art.content) %>
+          </p>
+            <%= link_to 'Read more', article_path(art.id), class: 'card__read-more' %>
+        </div>
+        <div class='card__vote'>
+          <%= display_vote(art) %>
+          <span>
+            <%= art.votes.count %>
+            votes
+          </span>
+        </div>
+      </div>
+    </article>
+  <% end %>
+</div>

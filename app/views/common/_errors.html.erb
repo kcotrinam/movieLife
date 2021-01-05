@@ -1,0 +1,7 @@
+<% if msgs.errors.any? %>
+    <ul class="errors_list">
+      <% msgs.errors.full_messages.each do |msg| %>
+        <li class="errors_list-item"><%= msg %></li>
+      <% end%>
+    </ul>
+  <% end %>

@@ -1,0 +1,22 @@
+<div class="form-container">
+<%= render partial: 'common/errors', locals: {msgs: @article} %>
+  <%= form_with model: @article, class: 'form' do |f| %>
+    <div class="control">
+      <%= f.label :title, class: 'label | text-is-white' %>
+      <%= f.text_field :title, class: 'input' %>
+    </div>
+    <div class="control">
+      <%= f.label :content, class: 'label | text-is-white' %>
+      <%= f.text_area :content, size: "25x9" ,class: 'input-area' %>
+    </div>
+  <div class="control">
+      <%= f.label :cover, class: 'label | text-is-white' %>
+      <%= f.file_field :avatar, class: 'input' %>
+    </div>
+  <div class="control">
+      <%= f.label :category, class: 'label | text-is-white' %>
+      <%= select_tag :categories, options_for_select(@categories), class: 'input' %>
+    </div>
+    <%= f.submit class: 'form__button | text-is-white' %>
+  <% end %>
+</div>

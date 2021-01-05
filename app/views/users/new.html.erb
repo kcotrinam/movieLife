@@ -1,0 +1,20 @@
+ 
+
+<div class="form-container">
+  <%= render partial: 'common/errors', locals: {msgs: @user} %>
+  <%= form_with model: @user, class: 'form' do |f| %>
+    <div class="control">
+      <%= f.label :name, class: "label | text-is-white" %>
+      <%= f.text_field :name, class: "input" %>
+    </div>
+    <div class="control">
+      <%= f.label :username, class: "label | text-is-white" %>
+      <%= f.text_field :username, class: "input" %>
+    </div>
+    <div class="control">
+      <%= f.label :email, class: "label | text-is-white" %>
+      <%= f.text_field :email, class: "input" %>
+    </div>
+    <%= f.submit class: "form__button | text-is-white" %>
+  <% end %>
+</div>

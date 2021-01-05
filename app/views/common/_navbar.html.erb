@@ -1,0 +1,30 @@
+<nav class="navbar">
+  <div class="navbar__start">
+      <%= link_to 'MoviesLife', categories_path, class: 'navbar__brand' %>
+  </div>
+  <div class="navbar__middle">
+    <%= link_to 'New Article', new_article_path, class: 'navbar__new-article' %>
+    <%= link_to 'New category', new_category_path, class: 'navbar-item' %>
+    <div class="categories | dropdown">
+        categories
+      <div class="categories | dropdown-items">
+        <% categories.each do |cat| %>
+            <%= link_to "#{cat.name}", category_path(cat), class: 'navbar__middle-link | ' %>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="navbar__end">
+    <% if user_signed_in?%>
+      <p class="navbar__end-user">
+        <%= current_user.name %>
+      </p>
+        <%= link_to 'Sign out', sign_out_path, class: 'navbar-item' %>
+    <% else %>
+        <%= link_to 'Sign up', sign_up_path, class: "button is-primary" %>
+        <%= link_to 'Sign in', sign_in_path, class: "navbar-item" %>
+    <% end %>
+  </div>
+</nav>
